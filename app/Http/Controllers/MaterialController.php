@@ -15,7 +15,7 @@ class MaterialController extends Controller
     public function index()
     {
         //$f = Material::paginate(2); var_dump($f);
-        return View('material.index')->with('materiais',Material::paginate(2));
+        return View('material.index')->with('materiais',Material::paginate(5));
     }
 
     /**
@@ -101,7 +101,7 @@ class MaterialController extends Controller
             'minimo.*' => 'Quantidade miníma do Material  é obrigatório de tamanho máximo de 255 caracteres'
         ]
     );
-        $material::update($request->all());
+        $material->update($request->all());
         return redirect('/material');
 
     }

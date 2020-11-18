@@ -14,13 +14,31 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
 </head>
 <body>
+<style>
+.gradiente{
+    background: linear-gradient(to right, #7952B3, #c6a1ff);
+  }
 
-<nav class="navbar navbar-light bg-light">
-  <a class="navbar-brand">Materiais para construção</a>
-  <form class="form-inline">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
-  </form>
+    .gradiente2{
+    background: linear-gradient(to right, #c6a1ff, #7952B3);
+  }
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light gradiente2">
+  <a class="navbar-brand" href="/" style="color: white">Materiais para construção</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/fornecedor" style="color: white">Fornecedores</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/material" style="color: white">Materiais</a>
+      </li>
+    </ul>
+  </div>
 </nav>
 
 <br/>
@@ -30,8 +48,22 @@
 	<!-- As views filhas incluem conteúdo aqui e no outro Arrobayield acima -->
 	@yield('corpo')
 
-<a href="/material">Ir para Materiais</a>
-<a href="/fornecedor">Ir para Fornecedores</a>
 
+
+
+
+
+<!-- Footer -->
+<br/>
+<footer class="page-footer font-small fixed-bottom gradiente" style="background-color: #F8F9FA" >
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3" style="color: white">© 2020 Copyright:
+    <a href="https://fatecpg.edu.br" style="color: white"> FATEC PG</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
 </body>
 </html>

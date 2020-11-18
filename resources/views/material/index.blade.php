@@ -2,28 +2,48 @@
 @section('titulo','Lista de Materiais')
 @section('corpo')
 
-<H1>TESTE</H1>
-<a href="/material/create" class="btn btn-primary btn-sm">Novo</a>
-<table class="table table-striped">
+<style>
+	.page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: #7952B3; 
+    border-color: white; 
+}
+</style>
+<div class="container">
+
+<div class="row">
+<div class="col">
+	<h2>Materiais</h2> <br/>
+</div>
+<div class="col" style=" margin-left: 55%;">
+<a href="/material/create" style="background-color:  #7952B3" class="btn btn-primary btn-sm">Novo</a>
+</div>
+</div>
+<table class="table table-hover table-borderless">
 	<tr>
 		<th>ID</th>
 		<th>Descrição</th>
 		<th>Quantidade</th>
 		<th>Minímo</th>
+		<th>Ações</th>
 	</tr>
 
-	@foreach($materiais as $f)
+	@foreach($materiais as $m)
 	<tr>
-		<td>{{$f->id}}</td>
-		<td>{{$f->descricao}}</td>
-		<td>{{$f->quantidade}}</td>
-		<td>{{$f->minimo}}</td>
+		<td>{{$m->id}}</td>
+		<td>{{$m->descricao}}</td>
+		<td>{{$m->quantidade}}</td>
+		<td>{{$m->minimo}}</td>
 		<td>
-			<a href="/material/{{$f->id}}" class="btn btn-primary btn-sm">Detalhe</a>
-			<a href="/material/{{$f->id}}/edit" class="btn btn-primary btn-sm">Editar</a>
+			<a href="/material/{{$m->id}}" style="background-color:  #7952B3" class="btn btn-primary btn-sm">Detalhe</a>
+			<a href="/material/{{$m->id}}/edit" style="background-color:  #7952B3" class="btn btn-primary btn-sm">Editar</a>
 		</td>
 	</tr>
 	@endforeach
 </table>
 {{ $materiais->links() }}
+</div>
+
+
 @endsection

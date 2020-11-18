@@ -15,7 +15,7 @@ class FornecedorController extends Controller
     public function index()
     {
         // $f = Fornecedor::paginate(2); var_dump($f);
-       return View('fornecedor.index')->with('fornecedores',Fornecedor::paginate(2));
+       return View('fornecedor.index')->with('fornecedores',Fornecedor::paginate(5));
     }
 
     /**
@@ -104,7 +104,7 @@ class FornecedorController extends Controller
             'email.*' => 'Email é obrigatório de tamanho máximo de 255 caracteres'
         ]
     );
-        $fornecedor::update($request->all());
+        $fornecedor->update($request->all());
         return redirect('/fornecedor');
     }
 

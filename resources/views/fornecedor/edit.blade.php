@@ -2,7 +2,8 @@
 @section('titulo','Editar Fornecedor')
 @section('corpo')
 
-<h1>Editar Fornecedor</h1>
+<div class="container">
+	<h2>Editar Fornecedor N°{{$fornecedor->id}}</h2>
 <div class="row">
 	<div class="col-sm-6">
 		<form action="/fornecedor/{{$fornecedor->id}}" method="post">
@@ -40,9 +41,10 @@
 				<p class="text-danger">{{$errors->first('email')}}</p>
 				@endif
 			</div>
-			<input type="submit" value="Alterar" class="btn btn-primary btn-sm"/>
-			<a href="/fornecedor" class="btn btn-primary btn-sm">Voltar</a>
+			<input type="submit" value="Alterar" style="background-color:  #7952B3" class="btn btn-primary btn-sm"/>
+			<a href="/fornecedor" style="background-color:  #7952B3" class="btn btn-primary btn-sm">Voltar</a>
 		</form>
 	</div>
+</div>
 </div>
 @endsection
