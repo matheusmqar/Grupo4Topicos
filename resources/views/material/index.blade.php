@@ -40,9 +40,21 @@
 			<a href="/material/{{$m->id}}/edit" style="background-color:  #7952B3" class="btn btn-primary btn-sm">Editar</a>
 		</td>
 	</tr>
-	@endforeach
+		@endforeach
 </table>
+
+	@foreach($materiais as $m)
+@if($m->quantidade < $m->minimo)
+
+<div class="alert alert-danger" role="alert">
+O item: {{$m->descricao}} está em falta! <br/>
+<a href="/pedido"> Fazer pedido do item. </a>
+</div>
+@endif
+@endforeach
+
 {{ $materiais->links() }}
+
 </div>
 
 

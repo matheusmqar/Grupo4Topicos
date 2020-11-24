@@ -120,4 +120,16 @@ class FornecedorController extends Controller
         Fornecedor::destroy($id);
         return redirect('/fornecedor');
     }
+
+    /*
+    public function search (Request $request){
+       
+       $search = $request->get('search');
+
+       $fornecedores = Fornecedor::where('id', '=', $search);
+
+        return View('fornecedor.index' , compact('fornecedores','search'));
+
+    }
+    */
 }

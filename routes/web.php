@@ -18,3 +18,9 @@ Route::get('/', function () {
 Route::resource('fornecedor','FornecedorController');
 
 Route::resource('material','MaterialController');
+
+Route::get('/pedido' , function (){
+	return view('pedido.index');
+});
+
+//Route::post('search', 'FornecedorController@filtro')->name('fornecedor.filtro');

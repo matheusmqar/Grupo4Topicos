@@ -16,11 +16,11 @@
 <body>
 <style>
 .gradiente{
-    background: linear-gradient(to right, #7952B3, #c6a1ff);
+    background: linear-gradient(to right, #7952B3, #4f3675);
   }
 
     .gradiente2{
-    background: linear-gradient(to right, #c6a1ff, #7952B3);
+    background: linear-gradient(to right, #4f3675, #7952B3);
   }
 </style>
 

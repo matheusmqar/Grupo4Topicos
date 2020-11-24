@@ -10,13 +10,59 @@
 <body>
 <style>
 .gradiente{
-    background: linear-gradient(to right, #7952B3, #c6a1ff);
+    background: linear-gradient(to right, #7952B3, #4f3675);
   }
 
   .gradiente2{
-    background: linear-gradient(to right, #c6a1ff, #7952B3);
+    background: linear-gradient(to right, #4f3675, #7952B3);
   }
+
+  #wrapper {
+    overflow-x: hidden;
+ }
+
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: -15rem;
+  -webkit-transition: margin .25s ease-out;
+  -moz-transition: margin .25s ease-out;
+  -o-transition: margin .25s ease-out;
+  transition: margin .25s ease-out;
+}
+
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group {
+  width: 15rem;
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
+}
 </style>
+
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light gradiente2">
   <a class="navbar-brand" href="/" style="color: white">Materiais para construção</a>
@@ -24,21 +70,34 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="/fornecedor" style="color: white">Fornecedores</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/material" style="color: white">Materiais</a>
-      </li>
+    <ul class="navbar-nav ml-auto">
+      <div id="page-content-wrapper" >
+        <button class="btn btn-primary" id="menu-toggle" style="background-color:  #7952B3"><i class="fas fa-bars"></i></button>
+      </div>
     </ul>
   </div>
 </nav>
 
+<div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading"> Projeto  </div>
+      <div class="list-group list-group-flush">
+        <a href="/fornecedor" class="list-group-item list-group-item-action bg-light">Lista</a>
+        <a href="/pedido" class="list-group-item list-group-item-action bg-light">Pedidos</a>
+        <a href="/fornecedor" class="list-group-item list-group-item-action bg-light">Fornecedores</a>
+        <a href="/material" class="list-group-item list-group-item-action bg-light">Materiais</a>
+        <div class="sidebar-heading"> Etc.  </div>
+        <a href="https://github.com/matheusmqar/Grupo4Topicos" class="list-group-item list-group-item-action bg-light">Github</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">Sobre nós</a> <hr>
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
 
 
-<br/>
-<header class="masthead text-white text-center">
+      <div class="container-fluid">
+        <header class="masthead text-white text-center">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
@@ -46,21 +105,57 @@
           <img src="https://uploaddeimagens.com.br/images/002/967/550/full/metalurgica.png?1605683913">
         </div>
         <div class="col-md-12 mx-auto">
-          <form>
-            <div class="form-row mx-auto">
-              <div class="col-3"></div>
-            	<div class="col-3">
+                    <div class="row" style="margin-left: 10%">
+              <!--
+              <div class="col-3">
                 <button type="button" class="btn btn-lg btn-primary" onclick="location.href='/fornecedor'"; style="background-color:  #7952B3"> Lista</button>  
                 </div>
                         <div class="col-2 " >
-                <button type="submit" class="btn btn-lg btn-primary" style="background-color:  #7952B3">Pedidos</button>
+                <button type="button" class="btn btn-lg btn-primary" onclick="location.href='/pedido'"; style="background-color:  #7952B3">Pedidos</button>
+              </div>
+-->
+              <div class="card" style="width: 18rem; margin: 5px;">
+                <img src="https://uploaddeimagens.com.br/images/002/976/972/full/fornecedor-lust.jpg?1606207607"  style="border: 1px solid #7952B3;" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title" style="color: black">Fornecedores</h5>
+                  <a href="/fornecedor" class="btn btn-primary" style="background-color:  #7952B3" >Ir para lá</a>
               </div>
             </div>
-          </form>
+            <div class="card" style="width: 18rem; margin: 5px;">
+              <img src="https://uploaddeimagens.com.br/images/002/976/969/full/principais-gargalos-operacionais-da-industria-1.jpg?1606206744" style="border: 1px solid #7952B3;" class="card-img-top" alt="..." >
+              <div class="card-body">
+                <h5 class="card-title" style="color:  black">Materiais</h5>
+                <a href="/material" class="btn btn-primary" style="background-color:  #7952B3" >Acessar</a>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem; margin: 5px;">
+              <img src="https://uploaddeimagens.com.br/images/002/976/971/full/pedidos-box-ilust.jpg?1606207407"  style="border: 1px solid #7952B3;"  class="card-img-top" alt="...">
+              <div class="card-body" >
+                <h5 class="card-title" style="color: black">Pedidos</h5>
+                <a href="/pedido" class="btn btn-primary" style="background-color:  #7952B3" >Solicitar</a>
+              </div>
+            </div>
+            </div>
         </div>
       </div>
     </div>
   </header>
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+  <!-- Menu Toggle Script -->
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
+
+<br/>
+
 
 
 
