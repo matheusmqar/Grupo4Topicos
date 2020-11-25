@@ -36,7 +36,7 @@
 		<td>{{$m->quantidade}}</td>
 		<td>{{$m->minimo}}</td>
 		<td>
-			<a href="/material/{{$m->id}}" style="background-color:  #7952B3" class="btn btn-primary btn-sm">Detalhe</a>
+			<a href="/material/{{$m->id}}" style="background-color:  #7952B3" class="btn btn-primary btn-sm">Detalhes</a>
 			<a href="/material/{{$m->id}}/edit" style="background-color:  #7952B3" class="btn btn-primary btn-sm">Editar</a>
 		</td>
 	</tr>

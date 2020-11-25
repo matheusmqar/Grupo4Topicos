@@ -38,7 +38,7 @@
 		</form>
 		<td>
 			<form action="" method="post"> 
-			<input type="number" class="form-control-sm">
+			<input type="number" id="pedido" name="pedido" class="form-control-sm">
 			<input type="submit" value="Solicitar" style="background-color:  #7952B3" class="btn btn-primary btn-sm">
 			</form>
 		</td>
@@ -51,7 +51,7 @@
 		</form>
 		<td>
 			<form action="" method="post"> 
-			<input type="number" class="form-control-sm">
+			<input type="number" id="pedido" name="pedido" class="form-control-sm">
 			<input type="submit" value="Solicitar" style="background-color:  #7952B3" class="btn btn-primary btn-sm">
 			</form>
 		</td>
@@ -65,7 +65,7 @@
 		</form>
 		<td>
 			<form action="" method="post"> 
-			<input type="number" class="form-control-sm">
+			<input type="number" id="pedido" name="pedido" class="form-control-sm">
 			<input type="submit" value="Solicitar" style="background-color:  #7952B3" class="btn btn-primary btn-sm">
 			</form>
 		</td>
