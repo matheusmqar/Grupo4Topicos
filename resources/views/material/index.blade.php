@@ -46,10 +46,18 @@
 	@foreach($materiais as $m)
 @if($m->quantidade < $m->minimo)
 
+
 <div class="alert alert-danger" role="alert">
-O item: {{$m->descricao}} está em falta! <br/>
-<a href="/pedido"> Fazer pedido do item. </a>
+<div>
+O item: {{$m->descricao}} está em falta! 
+
+ <a class="btn btn-primary btn-sm float-right"  href="/pedido" style="background-color:  #7952B3;  "> <!-- /material/{{$m->id}}/pedido -->
+    Fazer pedido do item.
+ </a> 
+
+ </div>
 </div>
+
 @endif
 @endforeach
 

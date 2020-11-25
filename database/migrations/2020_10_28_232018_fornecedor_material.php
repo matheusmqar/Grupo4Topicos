@@ -21,7 +21,7 @@ class FornecedorMaterial extends Migration
             $table->foreign('material_id')->references('id')->on('materials');
             $table->foreign('fornecedor_id')->references('id')->on('fornecedors');
             $table->unique(['material_id','fornecedor_id']);
-            
+        
         }
     );
     }

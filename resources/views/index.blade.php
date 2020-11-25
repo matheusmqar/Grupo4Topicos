@@ -84,7 +84,6 @@
     <div class="bg-light border-right" id="sidebar-wrapper">
       <div class="sidebar-heading"> Projeto  </div>
       <div class="list-group list-group-flush">
-        <a href="/fornecedor" class="list-group-item list-group-item-action bg-light">Lista</a>
         <a href="/pedido" class="list-group-item list-group-item-action bg-light">Pedidos</a>
         <a href="/fornecedor" class="list-group-item list-group-item-action bg-light">Fornecedores</a>
         <a href="/material" class="list-group-item list-group-item-action bg-light">Materiais</a>

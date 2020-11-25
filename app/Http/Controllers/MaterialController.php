@@ -118,4 +118,7 @@ class MaterialController extends Controller
         Material::destroy($id);
         return redirect('/material');
     }
+
+
+    
 }
